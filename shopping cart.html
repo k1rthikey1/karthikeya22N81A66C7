@@ -1,0 +1,106 @@
+<html> 
+ <head> 
+  
+     <title>Shopping Cart</title> 
+     <link rel="stylesheet" href="styles.css"> 
+  
+ </head> 
+ <body> 
+
+
+ <div id="login-section" class="hidden"> 
+         <h1>Login</h1> 
+         <form onsubmit="return login">
+            <table>
+            <tr><td><label>User Name: </label></td>
+            <td><input type="text" id="username" placeholder="Username" required></td></tr>
+            
+            <tr><td><label>Password: </label></td>
+                <td><input type="password" id="password" placeholder="Password" required></td>
+            
+                <tr><td><button type="submit">Login</button></td></tr>
+            </table> 
+         </form> 
+         <p>Don't have an account? <a href="#" onclick="showRegistration()">Register here</a></p> 
+     </div> </table>
+  
+  
+         <div id="registration-section" class="hidden"> 
+         <h1>Register</h1> 
+  
+         <form onsubmit="return register()">
+            <table>
+            <tr><td>
+            <label>E-mail: </label>
+            </td>
+            <td><input type="email" id="email" placeholder="......@gmail.com" required>
+            </td>
+            </tr>
+
+            <tr><td><label>User Name: </label></td>
+             <td><input type="text" id="regUsername" placeholder="Username" required>
+             </td></tr>
+
+             <tr><td><label>Password: </label></td>
+             <td><input type="password" id="regPassword" placeholder="Password" required>
+             </td></tr>
+
+             <tr><td><label>Date: </label></td>
+             <td><input type="date" id="" placeholder="Date" required style="text-align: center; padding: 5px;">
+            </td></tr>
+            <tr><td><button type="submit">Register</button> </td></tr>
+             
+            </table>
+         </form> 
+  
+         <p>Already have an account? <a href="#" onclick="showLogin()">Login here</a></p> 
+     </div> 
+         <div id="main-section" class="hidden"> 
+         <h1>Shopping Cart</h1> 
+  
+         <div class="products"> 
+         <div class="product"> 
+             <h2>carrot</h2> 
+             <p>Price: $50</p> 
+             <img src="images/1.png" height="100" width="100"><br>
+             <button class="add-to-cart" onclick="addToCart('carrot', 50)">Add to Cart</button> 
+         </div>
+  
+         <div class="product"> 
+             <h2>potato</h2> 
+             <p>Price: $20</p> 
+             <img src="images/2.png" height="100" width="100"><br>
+             <button class="add-to-cart" onclick="addToCart('potato', 20)">Add to Cart</button> 
+         </div> 
+
+         <div class="product"> 
+             <h2>tomato</h2> 
+             <p>Price: $30</p> 
+             <img src="images/3.png" height="100" width="100"><br>
+             <button class="add-to-cart" onclick="addToCart('tomato', 30)">Add to Cart</button> 
+         </div> 
+         <div class="product"> 
+             <h2>spinach</h2> 
+             <p>Price: $15</p> 
+             <img src="images/4.png" height="100" width="100"><br>
+             <button class="add-to-cart" onclick="addToCart('spinach', 15)">Add to Cart</button> 
+         </div> 
+         <div class="product"> 
+             <h2>coriander</h2> 
+             <p>Price: $10</p> 
+             <img src="images/5.png" height="100" width="100"><br>
+             <button class="add-to-cart" onclick="addToCart('coriander', 10)">Add to Cart</button> 
+         </div> 
+         </div> 
+  
+         <div class="cart"> 
+             <h2>Shopping Cart</h2> 
+             <ul id="cart-items"></ul> 
+             <p>Total: $<span id="total">0</span></p> 
+             <button onclick="checksout()">Checkout</button> 
+         </div> 
+     </div> 
+  
+ <script src="script.js"></script> 
+ </body> 
+ </html>
